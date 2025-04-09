@@ -1,5 +1,6 @@
 import React from 'react'
 import SEOHelmet from '../Components/SEO/SeoHelmet'
+import HeaderTop from '../Components/HeaderTop'
 
 const Home = () => {
   return (
@@ -9,7 +10,8 @@ const Home = () => {
         description="Welcome to Herbal Science — Discover nature's wellness products handcrafted with care."
       />
        <div>
-        <h1>Hello, this is Sachin Singh Rajput. Welcome to the home page of Herbal Science.</h1>
+       
+        <HeaderTop/>
       </div>
   </>
   )
