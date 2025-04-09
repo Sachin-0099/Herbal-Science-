@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://herbalscience.in/sitemap.xml
