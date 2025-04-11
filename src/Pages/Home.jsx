@@ -11,7 +11,7 @@ const Home = () => {
       />
        <div>
        
-        <HeaderTop/>
+     
       </div>
   </>
   )
