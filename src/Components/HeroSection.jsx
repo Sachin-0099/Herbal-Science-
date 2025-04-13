@@ -2,11 +2,12 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import slidesData from "../Utils/slidesData";
 
 const HeroSection = ({ slides }) => {
   return (
     <section
-      className="w-full max-w-screen-2xl mx-auto"
+      className="w-full max-w-screen-2xl mx-auto mb-5"
       aria-label="Hero Section Carousel"
     >
       <Carousel
@@ -19,10 +20,10 @@ const HeroSection = ({ slides }) => {
         emulateTouch
         className="text-left"
       >
-        {slides.map((slide, index) => (
+        {slidesData.map((slide, index) => (
           <div
             key={index}
-            className="relative h-[70vh] sm:h-[80vh] md:h-[90vh]"
+            className="relative h-[70vh] sm:h-[80vh] md:h-[80vh]"
           >
             <img
               src={slide.image}
@@ -30,7 +31,7 @@ const HeroSection = ({ slides }) => {
               loading="lazy"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end sm:items-center justify-start p-4 sm:p-10 text-white">
+            <div className="absolute bottom-0 left-0 w-full bg-opacity-50 flex items-end justify-start p-4 sm:p-10 text-brand-100 bg-gradient-to-t from-black to-transparent">
               <div className="max-w-xl mb-6 sm:mb-0">
                 <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold mb-3 leading-tight">
                   {slide.title}
@@ -41,7 +42,7 @@ const HeroSection = ({ slides }) => {
                 {slide.buttonText && slide.buttonLink && (
                   <a
                     href={slide.buttonLink}
-                    className="inline-block bg-white text-black text-sm sm:text-base px-5 py-2 rounded-md font-medium hover:bg-gray-200 transition"
+                    className="inline-block bg-[#007d51] text-white text-sm sm:text-base px-5 py-2 rounded-md font-medium hover:bg-gray-200 transition"
                   >
                     {slide.buttonText}
                   </a>

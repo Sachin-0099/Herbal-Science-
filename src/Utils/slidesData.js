@@ -7,14 +7,14 @@ const slidesData = [
       buttonLink: "/products",
     },
     {
-      image: "/Images/slide2.jpg",
+      image: "/Images/Banner99.jpeg",
       title: "Pure & Organic Ingredients",
       description: "Crafted with 100% natural herbal extracts.",
       buttonText: "Learn More",
       buttonLink: "/about",
     },
     {
-      image: "/Images/slide3.jpg",
+      image: "/Images/Banner499.webp",
       title: "Wellness That Works",
       description: "Experience true healing through ancient herbal formulas.",
       buttonText: "Shop Now",

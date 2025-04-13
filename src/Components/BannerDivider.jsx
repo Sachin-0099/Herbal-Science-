@@ -2,7 +2,7 @@ import React from 'react';
 
 const BannerDivider = () => {
   return (
-    <section aria-label="Promotional Banner">
+    <section aria-label="Promotional Banner " className='my-10'>
       <img
         src="/Images/Banner99.jpeg"
         alt="Ayurvedic Product Promotional Banner"
