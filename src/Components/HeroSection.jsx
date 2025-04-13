@@ -3,10 +3,12 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-
 const HeroSection = ({ slides }) => {
   return (
-    <div className="w-full max-w-screen-2xl mx-auto">
+    <section
+      className="w-full max-w-screen-2xl mx-auto"
+      aria-label="Hero Section Carousel"
+    >
       <Carousel
         autoPlay
         infiniteLoop
@@ -18,33 +20,38 @@ const HeroSection = ({ slides }) => {
         className="text-left"
       >
         {slides.map((slide, index) => (
-          <div key={index} className="relative h-[70vh] sm:h-[80vh] md:h-[90vh]">
+          <div
+            key={index}
+            className="relative h-[70vh] sm:h-[80vh] md:h-[90vh]"
+          >
             <img
               src={slide.image}
-              alt={slide.title}
+              alt={slide.title || `Slide ${index + 1}`}
+              loading="lazy"
               className="w-full h-full object-cover"
             />
-           <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end justify-start p-6 sm:p-10 text-white">
-  <div className="max-w-2xl mb-8">
-    <h1 className="text-3xl sm:text-5xl font-bold mb-4">
-      {slide.title}
-    </h1>
-    <p className="text-md sm:text-lg mb-6">{slide.description}</p>
-    {slide.buttonText && (
-      <a
-        href={slide.buttonLink}
-        className="bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-gray-200 transition"
-      >
-        {slide.buttonText}
-      </a>
-    )}
-  </div>
-</div>
-
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end sm:items-center justify-start p-4 sm:p-10 text-white">
+              <div className="max-w-xl mb-6 sm:mb-0">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold mb-3 leading-tight">
+                  {slide.title}
+                </h1>
+                <p className="text-sm sm:text-lg md:text-xl mb-5 leading-relaxed">
+                  {slide.description}
+                </p>
+                {slide.buttonText && slide.buttonLink && (
+                  <a
+                    href={slide.buttonLink}
+                    className="inline-block bg-white text-black text-sm sm:text-base px-5 py-2 rounded-md font-medium hover:bg-gray-200 transition"
+                  >
+                    {slide.buttonText}
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
         ))}
       </Carousel>
-    </div>
+    </section>
   );
 };
 
