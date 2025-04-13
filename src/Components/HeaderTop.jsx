@@ -29,7 +29,7 @@ const HeaderTop = () => {
       {/* Phone Number - only on sm and up */}
       <div className="hidden sm:flex items-center space-x-2 pl-4 pr-2 z-10">
         <PhoneIcon style={{ fontSize: '16px' }} />
-        <a href="tel:+919691997997" className="underline text-sm sm:text-base">
+        <a href="tel:+919691997997" className="underline text-sm sm:text-base ">
           +919691997997
         </a>
       </div>

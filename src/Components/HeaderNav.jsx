@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
 import { CiHeart, CiGlobe } from "react-icons/ci";
 import { MdOutlineMenu } from "react-icons/md";
-import SideMenu from "../SideMenu";
+import SideMenu from "./SideMenu";
 
 const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,13 +72,7 @@ const HeaderNav = () => {
             </a>
 
             {/* Language Switcher */}
-            <div className="relative">
-              <CiGlobe
-                size={24}
-                className="cursor-pointer hover:text-[#3087d1]"
-                onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
-              />
-            </div>
+           
           </div>
 
           {/* Mobile Icons */}
@@ -89,13 +83,7 @@ const HeaderNav = () => {
             <a href="/cart">
               <FiShoppingBag size={22} className="cursor-pointer hover:text-[#3087d1]" />
             </a>
-            <div className="relative text-black">
-              <CiGlobe
-                size={22}
-                className="cursor-pointer hover:text-[#3087d1]"
-                onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
-              />
-            </div>
+         
           </div>
         </div>
 

@@ -2,11 +2,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home'
-import About from './Pages/About';
+
 
 import SideMenu from './Components/SideMenu';
 import PageLayout from './Components/PageLayout';
 import { useState } from "react";
+
+
 
 
 
@@ -28,17 +30,15 @@ const App = () => {
          <Home />
      </PageLayout>
         } />
-      <Route path="/about" element={
-    <PageLayout>
-          <About/>
-    </PageLayout>
-        } />
+     
+       
       
       <Route path="/sideMenu" element={
         <PageLayout>
           <SideMenu/>
         </PageLayout>
         } />
+  
 
     
 

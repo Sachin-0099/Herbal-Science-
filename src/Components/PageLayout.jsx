@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SideMenu from "../SideMenu";
+import SideMenu from "./SideMenu";
 import HeaderNav from "./HeaderNav";
 import HeaderTop from "./HeaderTop";
 

@@ -96,65 +96,188 @@ const SideMenu = ({ isOpen, onClose }) => {
       <h2>👨🏻 Hello, {firstName ? firstName : "User"}</h2>
       </div>
 
-      <MenuSection title="Trending" className="text-xl">
+      <MenuSection title="Joint & Muscle Care" className="text-xl">
         <ExpandableMenu
-          title="Best Sellers"
+          title="Ayurveda Oils"
           isOpen={openSections.sellers}
           toggle={() => toggleSection("sellers")}
         >
-          <MenuItem text="Top Rated by Customers" link="/top-rated" />
-          <MenuItem text="All-Time-Best-Seller" link="/all-time" />
-          <MenuItem text="Staff Pick" link="/staff-pick" />
-          <MenuItem text="Exclusive Online Offers" link="/exclusive" />
+          <MenuItem text=" Pain Relief Oils" link="/top-rated" />
+          <MenuItem text="Massage Oils" link="/all-time" />
+          <MenuItem text="Herbal Balms" link="/staff-pick" />
+       
         </ExpandableMenu>
         <ExpandableMenu
-          title="Trending Products"
+          title=" Supplements"
           isOpen={openSections.products}
           toggle={() => toggleSection("products")}
         >
-          <MenuItem text="Flash Deals" link="/flash" />
-          <MenuItem text="Bundle Offers" link="/bundle" />
-          <MenuItem text="Clearance Sale" link="/clearance" />
+          <MenuItem text="Capsules" link="/flash" />
+          <MenuItem text="Tablets" link="/bundle" />
+          <MenuItem text="Syrups" link="/clearance" />
+        </ExpandableMenu>
+
+        <ExpandableMenu
+          title=" SuExternal Therapy"
+          isOpen={openSections.products}
+          toggle={() => toggleSection("products")}
+        >
+          <MenuItem text="Patches" link="/flash" />
+          <MenuItem text="Heat Pads" link="/bundle" />
+          <MenuItem text=" Bandages" link="/clearance" />
         </ExpandableMenu>
       
       </MenuSection>
 
-      <MenuSection title="Shop">
+      <MenuSection title="Hair Fall">
         <ExpandableMenu
-          title="Acrylic Accessories"
+          title="Hair Oils"
           isOpen={openSections.acrylic}
           toggle={() => toggleSection("acrylic")}
         >
-          <MenuItem text="Acrylic sheets" link="/sheets" />
+          <MenuItem text="Herbal Oil" link="/sheets" />
 
-          <MenuItem text="Acrylic Wood" link="/mdf-wood" />
-          <MenuItem text="Mdf Wood" link="/wood" />
+          <MenuItem text="Onion Oil" link="/mdf-wood" />
+          <MenuItem text="Bhringraj Oil" link="/wood" />
         </ExpandableMenu>
 
         <ExpandableMenu
-          title="UV Printing Wall Art"
+          title=" Shampoos & Conditioners"
           isOpen={openSections.UV}
           toggle={() => toggleSection("UV")}
         >
-          <MenuItem text="Custom Frames" link="/frames" />
-          <MenuItem text="Acrylic Prints" link="/prints" />
-          <MenuItem text="Wall Decor" link="/wall-decor" />
-          <MenuItem text="Canvas Art" link="/canvas-art" />
-          <MenuItem text="Decorative Panels" link="/panels" />
+          <MenuItem text="Anti-hair fall Shampoo" link="/frames" />
+          <MenuItem text=" Sulfate-free Conditioner" link="/prints" />
+   
         </ExpandableMenu>
-
-     
-        
+       
+        <ExpandableMenu
+          title="Supplements"
+          isOpen={openSections.UV}
+          toggle={() => toggleSection("UV")}
+        >
+          <MenuItem text="Biotin Capsules" link="/frames" />
+          <MenuItem text="Hair Gummies" link="/prints" />
+          <MenuItem text=" Ayurvedic Tablets" link="/prints" />
+   
+        </ExpandableMenu>
+        <ExpandableMenu
+          title=" Hair Treatment Kits"
+          isOpen={openSections.UV}
+          toggle={() => toggleSection("UV")}
+        >
+          <MenuItem text="Hair Regrowth Kit" link="/frames" />
+          <MenuItem text="Dandruff Control Kit" link="/prints" />
+        </ExpandableMenu>
       </MenuSection>
 
-     
+      <MenuSection title="Weight Gain">
+        <ExpandableMenu
+          title="Herbal Powders"
+          isOpen={openSections.acrylic}
+          toggle={() => toggleSection("acrylic")}
+        >
+          <MenuItem text="Ashwagandha Churna" link="/sheets" />
 
-
-
-
-       
+          <MenuItem text="Shatavari Powder" link="/mdf-wood" />
         
-     
+        </ExpandableMenu>
+
+        <ExpandableMenu
+          title="Capsules & Tonics"
+          isOpen={openSections.UV}
+          toggle={() => toggleSection("UV")}
+        >
+          <MenuItem text="Ayurvedic Capsules" link="/frames" />
+          <MenuItem text=" Weight Gain Syrups" link="/prints" />
+   
+        </ExpandableMenu>
+       
+        <ExpandableMenu
+          title=" Meal Replacers"
+          isOpen={openSections.UV}
+          toggle={() => toggleSection("UV")}
+        >
+          <MenuItem text=" Herbal Protein Shakes" link="/frames" />
+          <MenuItem text="Natural Mass Gainers" link="/prints" />
+        </ExpandableMenu>
+
+
+      
+      </MenuSection>
+      {/* 
+        Menu section for the diabetic products */}
+
+<MenuSection title="Diabetic">
+        <ExpandableMenu
+          title="Sugar Control Supplements"
+          isOpen={openSections.acrylic}
+          toggle={() => toggleSection("acrylic")}
+        >
+          <MenuItem text=" Karela Capsules" link="/sheets" />
+
+          <MenuItem text="Jamun Tablets" link="/mdf-wood" />
+          <MenuItem text="Diabetic Tonics" link="/mdf-wood" />
+        
+        </ExpandableMenu>
+
+        <ExpandableMenu
+          title="Herbal Teas"
+          isOpen={openSections.UV}
+          toggle={() => toggleSection("UV")}
+        >
+          <MenuItem text="Diabetic Control Tea" link="/frames" />
+          <MenuItem text="Bitter Melon Tea" link="/prints" />
+   
+        </ExpandableMenu>
+       
+        <ExpandableMenu
+          title="Foods for Diabetics"
+          isOpen={openSections.UV}
+          toggle={() => toggleSection("UV")}
+        >
+          <MenuItem text="Low GI Foods" link="/frames" />
+          <MenuItem text="Sugar-Free Snacks" link="/prints" />
+        </ExpandableMenu>
+       
+      
+        <ExpandableMenu
+          title=" Juices"
+          isOpen={openSections.UV}
+          toggle={() => toggleSection("UV")}
+        >
+          <MenuItem text=" Karela Jamun Juice" link="/frames" />
+          <MenuItem text=" Neem Juice" link="/prints" />
+        </ExpandableMenu>
+
+
+      
+      </MenuSection>
+    {/* for the sexual products */}
+    <MenuSection title="Sexual Wellness">
+        <ExpandableMenu
+          title="Men's Health"
+          isOpen={openSections.acrylic}
+          toggle={() => toggleSection("acrylic")}
+        >
+          <MenuItem text="Stamina Capsules" link="/sheets" />
+
+          <MenuItem text="Delay Sprays" link="/mdf-wood" />
+          <MenuItem text="Vitality Tonics" link="/mdf-wood" />
+        
+        </ExpandableMenu>
+
+        <ExpandableMenu
+          title="Women's Health"
+          isOpen={openSections.UV}
+          toggle={() => toggleSection("UV")}
+        >
+          <MenuItem text=" Libido Enhancers" link="/frames" />
+          <MenuItem text=" Mood Balance Supplements" link="/prints" />
+   
+        </ExpandableMenu>
+
+      </MenuSection>
 
       <MenuSection title="Help and Settings">
         <MenuItem text="Your Account" link="/account" />
