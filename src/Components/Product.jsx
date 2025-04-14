@@ -99,7 +99,7 @@ const ProductCard = ({ product }) => {
 // Main Product Component
 const Product = ({ title, products }) => {
   return (
-    <section className="px-10 py-8" aria-label="Lightning Deals Section">
+    <section className="px-10 py-4" aria-label="Lightning Deals Section">
       {/* Dynamic Title */}
       <h2 className="text-3xl font-bold text-center mb-10">{title}</h2>
 

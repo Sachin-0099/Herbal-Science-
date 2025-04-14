@@ -7,7 +7,7 @@ import slidesData from "../Utils/slidesData";
 const HeroSection = ({ slides }) => {
   return (
     <section
-      className="w-full max-w-screen-2xl mx-auto mb-5"
+      className="w-full max-w-screen-2xl mx-auto  overflow-x-hidden"
       aria-label="Hero Section Carousel"
     >
       <Carousel
@@ -18,12 +18,12 @@ const HeroSection = ({ slides }) => {
         interval={5000}
         swipeable
         emulateTouch
-        className="text-left"
+        className="text-left max-w-full overflow-hidden"
       >
         {slidesData.map((slide, index) => (
           <div
             key={index}
-            className="relative h-[70vh] sm:h-[80vh] md:h-[80vh]"
+            className="relative h-[70vh] sm:h-[80vh] md:h-[80vh] w-full overflow-hidden"
           >
             <img
               src={slide.image}
