@@ -33,7 +33,7 @@ const PageLayout = ({ children }) => {
         </div>
 
         {/* Page Content */}
-        <div className="w-full  pt-[150px] mt-18 lg:mt-0 md:mt-2">
+        <div className="w-full  pt-[140px] sm:pt-[130] mt-18 lg:mt-0 md:mt-2">
           {children}
         </div>
       </div>

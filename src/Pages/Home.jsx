@@ -6,6 +6,7 @@ import DiscountBannerSection from '../Components/DiscountBannerSection'
 import Product from '../Components/Product'
 import BannerDivider from '../Components/BannerDivider'
 import VideoSection from '../Components/VideoSection'
+import Footer from '../Components/Footer'
 const dealBanners = [
   { id: 1, image: "/Images/Banner99.jpeg" },
   { id: 2, image: "/Images/Banner199.webp" },
@@ -102,6 +103,7 @@ const Home = () => {
       <div className='mt-20'>
       <BannerDivider />
       </div>
+      <Footer/>
        
      
       </div>

@@ -4,7 +4,7 @@ import { FaHeart, FaShareAlt } from "react-icons/fa";
 const VideoSectionData = [
     {
         id: 1,
-        video: "/Videos/Video1.mp4",
+        video: "/Videos/VIdeo1.mp4",
         profile: "/Images/Banner99.jpeg",
         title: "Long Stay Ultra Matte Lipstick",
         description: "LONG STAY ULTRA MATTE LIPSTICK",
@@ -14,8 +14,8 @@ const VideoSectionData = [
     },
     {
         id: 2,
-        video: "/Videos/Video1.mp4",
-        profile: "/Images/Profile1.webp",
+        video: "/Videos/Video2.mp4",
+        profile: "/Images/Banner99.jpeg",
         title: "Pure Ghee & 24K Gold Kit",
         description: "DEEP NOURISHING NIGHT TREATMENT CREAM",
         price: 2910,
@@ -26,8 +26,8 @@ const VideoSectionData = [
     },
     {
         id: 3,
-        video: "/Videos/Video1.mp4",
-        profile: "/Images/Profile1.webp",
+        video: "/Videos/Video3.mp4",
+        profile: "/Images/Banner99.jpeg",
         title: "Long Stay Relaxed Matte Lipstick",
         description: "Relaxed Matte Finish",
         price: 425,
@@ -36,8 +36,8 @@ const VideoSectionData = [
     },
     {
         id: 4,
-        video: "/Videos/Video1.mp4",
-        profile: "/Images/Profile1.webp",
+        video: "/Videos/VIdeo1.mp4",
+        profile: "/Images/Banner99.jpeg",
         title: "8 in 1 Eyeshadow Lidsticks",
         description: "w/ my mini makeup favourites",
         price: 645,
@@ -46,8 +46,8 @@ const VideoSectionData = [
     },
     {
         id: 5,
-        video: "/Videos/Video1.mp4",
-        profile: "/Images/Profile1.webp",
+        video: "/Videos/Video2.mp4",
+        profile:"/Images/Banner99.jpeg",
         title: "Long Stay Perfect Matte",
         description: "Perfectly Matte Finish",
         price: 445,
@@ -56,8 +56,8 @@ const VideoSectionData = [
     },
     {
         id: 6,
-        video: "/Videos/Video1.mp4",
-        profile: "/Images/Profile1.webp",
+        video: "/Videos/Video3.mp4",
+        profile:"/Images/Banner99.jpeg",
         title: "Long Stay Relaxed Matte Lipstick",
         description: "Relaxed Matte Finish",
         price: 425,
