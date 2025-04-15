@@ -93,15 +93,33 @@ const Home = () => {
      
 
  <Product title={lightningDealsTitle} products={productData} />;
-       <BannerDivider/>
+ <BannerDivider
+  src="/Images/Banner99.jpeg"
+  alt="Ayurvedic Product Promotional Banner"
+  height="h-96"
+  width="w-full"
+/>
+
        <Product title={lightningDealsTitle} products={productData} />;
        <Product title={lightningDealsTitle} products={productData} />;
        <VideoSection/>
        <Product title={lightningDealsTitle} products={productData} />;
        <DiscountBannerSection title="Celebrate the Festive Season" images={dealBanners} />
-       <BannerDivider/>
+       <BannerDivider
+  src="/Images/Banner99.jpeg"
+  alt="Ayurvedic Product Promotional Banner"
+  height="h-96"
+  width="w-full"
+/>
+
       <div className='mt-20'>
-      <BannerDivider />
+      <BannerDivider
+  src="/Images/AwardsBanner.webp"
+  alt="Ayurvedic Product Promotional Banner"
+  height="h-96"
+  width="w-full"
+/>
+
       </div>
       <Footer/>
        

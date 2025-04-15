@@ -122,7 +122,7 @@ const VideoSection = () => {
                                     <span className="text-sm text-green-600 ml-1">{item.discount}</span>
                                 )}
                             </div>
-                            <button className="w-full mt-1 py-2 text-sm !bg-[#88564d] text-white rounded-md">
+                            <button className="w-full mt-1 py-2 text-sm !bg-[#228B22] text-white rounded-md">
                                 {item.button}
                             </button>
                         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -14,6 +15,35 @@ const Footer = () => {
       alert("Please enter a valid email address.");
     }
   };
+
+  const shopLinks = [
+    { name: "Skin", path: "/shop/skin" },
+    { name: "Hairfall", path: "/shop/hairfall" },
+    { name: "Joint & Muscle Care", path: "/shop/joint-muscle" },
+    { name: "Joint Pain", path: "/shop/joint-pain" },
+    { name: "Sexual", path: "/shop/sexual" },
+    { name: "Diabetic", path: "/shop/diabetic" },
+  ];
+
+  const aboutLinks = [
+    { name: "Our Story", path: "/our-story" },
+    { name: "The HS Blog - Our Beauty Journal", path: "/about/hs-blog" },
+    { name: "Gifting", path: "/about/gifting" },
+    { name: "Ingredients", path: "/about/ingredients" },
+    { name: "Recycle With Just Herbs", path: "/about/recycle" },
+    { name: "Hotel Partnerships", path: "/about/hotels" },
+    { name: "Refer & Earn", path: "/about/refer-earn" },
+    { name: "Loyalty Program", path: "/about/loyalty" },
+  ];
+
+  const helpLinks = [
+    { name: "Contact Us", path: "/help/contact" },
+    { name: "Privacy Policy", path: "/help/privacy-policy" },
+    { name: "Refund Policy", path: "/help/refund-policy" },
+    { name: "Shipping Policy", path: "/help/shipping-policy" },
+    { name: "Terms of Service", path: "/help/terms" },
+    { name: "Track Your Order", path: "/help/track-order" },
+  ];
 
   return (
     <footer style={{ backgroundColor: "#fef9f6", padding: "3rem 2rem" }}>
@@ -31,29 +61,31 @@ const Footer = () => {
       >
         {/* Herbal Science Info */}
         <div>
-          <h2 style={{ fontWeight: "bold", fontSize: "1.5rem", color: "#2c2c2c" }}>
+          <h2 style={{ fontWeight: "bold", fontSize: "1.5rem", color: "#228B22" }}>
             Herbal Science
           </h2>
           <p style={{ marginTop: "1rem", lineHeight: "1.6", color: "#333" }}>
             A line of pure, bespoke and Ayurvedic results-driven skin and hair care…
-            <a href="#" style={{ color: "#864f43", textDecoration: "underline", marginLeft: 5 }}>
+            <Link to="/about" style={{ color: "#864f43", textDecoration: "underline", marginLeft: 5 }}>
               read more
-            </a>
+            </Link>
           </p>
         </div>
 
         {/* SHOP */}
         <div>
-          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem", color: "#2c2c2c" }}>SHOP</h3>
+          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem", color: "#228B22" }}>SHOP</h3>
           <ul style={{ marginTop: "1rem", listStyle: "none", padding: 0 }}>
-            {["Skin", "Hair", "Bath & Body", "Natural Makeup", "Pure Fragrances", "Festive Giftings"].map((item) => (
-              <li
-                key={item}
-                style={{ marginBottom: "0.5rem", color: "#333", cursor: "pointer" }}
-                onMouseEnter={(e) => (e.target.style.color = "#864f43")}
-                onMouseLeave={(e) => (e.target.style.color = "#333")}
-              >
-                {item}
+            {shopLinks.map(({ name, path }) => (
+              <li key={name} style={{ marginBottom: "0.5rem" }}>
+                <Link
+                  to={path}
+                  style={{ color: "#333", textDecoration: "none" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#864f43")}
+                  onMouseLeave={(e) => (e.target.style.color = "#333")}
+                >
+                  {name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -61,25 +93,18 @@ const Footer = () => {
 
         {/* ABOUT */}
         <div>
-          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem", color: "#2c2c2c" }}>ABOUT</h3>
+          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem", color: "#228B22" }}>ABOUT</h3>
           <ul style={{ marginTop: "1rem", listStyle: "none", padding: 0 }}>
-            {[
-              "Our Story",
-              "The JH Edit - Our Beauty Journal",
-              "Gifting",
-              "Ingredients",
-              "Recycle With Just Herbs",
-              "Hotel Partnerships",
-              "Refer & Earn",
-              "Loyalty Program",
-            ].map((item) => (
-              <li
-                key={item}
-                style={{ marginBottom: "0.5rem", color: "#333", cursor: "pointer" }}
-                onMouseEnter={(e) => (e.target.style.color = "#864f43")}
-                onMouseLeave={(e) => (e.target.style.color = "#333")}
-              >
-                {item}
+            {aboutLinks.map(({ name, path }) => (
+              <li key={name} style={{ marginBottom: "0.5rem" }}>
+                <Link
+                  to={path}
+                  style={{ color: "#333", textDecoration: "none" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#864f43")}
+                  onMouseLeave={(e) => (e.target.style.color = "#333")}
+                >
+                  {name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -87,23 +112,18 @@ const Footer = () => {
 
         {/* HELP */}
         <div>
-          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem", color: "#2c2c2c" }}>HELP</h3>
+          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem", color: "#228B22" }}>HELP</h3>
           <ul style={{ marginTop: "1rem", listStyle: "none", padding: 0 }}>
-            {[
-              "Contact Us",
-              "Privacy Policy",
-              "Refund Policy",
-              "Shipping Policy",
-              "Terms of Service",
-              "Track Your Order",
-            ].map((item) => (
-              <li
-                key={item}
-                style={{ marginBottom: "0.5rem", color: "#333", cursor: "pointer" }}
-                onMouseEnter={(e) => (e.target.style.color = "#864f43")}
-                onMouseLeave={(e) => (e.target.style.color = "#333")}
-              >
-                {item}
+            {helpLinks.map(({ name, path }) => (
+              <li key={name} style={{ marginBottom: "0.5rem" }}>
+                <Link
+                  to={path}
+                  style={{ color: "#333", textDecoration: "none" }}
+                  onMouseEnter={(e) => (e.target.style.color = "#864f43")}
+                  onMouseLeave={(e) => (e.target.style.color = "#333")}
+                >
+                  {name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -111,7 +131,7 @@ const Footer = () => {
 
         {/* Newsletter */}
         <div>
-          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem", color: "#2c2c2c" }}>STAY UPDATED</h3>
+          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem", color: "#228B22" }}>STAY UPDATED</h3>
           <p style={{ marginTop: "1rem", color: "#333", lineHeight: "1.6" }}>
             Sign up for our newsletter to know about launches & offers!
           </p>
@@ -134,7 +154,7 @@ const Footer = () => {
             whileTap={{ scale: 0.95 }}
             onClick={handleSubscribe}
             style={{
-              backgroundColor: "#864f43",
+              backgroundColor: "#228B22",
               color: "#fff",
               padding: "0.8rem 2rem",
               borderRadius: "30px",

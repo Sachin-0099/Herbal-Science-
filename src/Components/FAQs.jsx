@@ -55,9 +55,9 @@ const FAQsSection = () => {
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
         </div>
-        <button className="bg-teal-700 hover:bg-teal-800 text-white font-bold py-3 px-6 rounded-md mt-8 focus:outline-none focus:shadow-outline">
-          EXPLORE ALL FAQ's
-        </button>
+        <button className="bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white font-bold py-3 mt-2 px-6 rounded-md shadow-md transform hover:scale-105 transition-transform duration-300">
+           Explore all 
+          </button>
       </div>
     </div>
   );
