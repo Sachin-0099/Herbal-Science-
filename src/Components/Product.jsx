@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 // ProductCard Component to make it reusable
 const ProductCard = ({ product }) => {
   const [hoveredImage, setHoveredImage] = useState(null);
+  const navigate = useNavigate();
 
   return (
     <article
-      className="flex flex-col justify-between h-full text-center relative shadow-lg rounded-lg bg-white p-4 transition-transform duration-300 hover:scale-105"
+      onClick={() => navigate(`/product/${product.id}`)}
+      className="cursor-pointer flex flex-col justify-between h-full text-center relative shadow-lg rounded-lg bg-white p-4 transition-transform duration-300 hover:scale-105 "
       itemScope
       itemType="http://schema.org/Product"
     >
       <div>
         {/* Top Badge */}
-        <div className="absolute top-0 left-0">
+        <div className="absolute top-0 left-0 px-4">
           {product.badge === "360° beauty" ? (
             <div className="flex flex-col items-start ml-[-10px] mt-[10px] rotate-[-90deg] text-[#228B22] font-medium">
               <span>★</span>
@@ -41,7 +44,9 @@ const ProductCard = ({ product }) => {
           onMouseLeave={() => setHoveredImage(null)}
         >
           <img
-            src={hoveredImage === product.id ? product.hoverImage : product.image}
+            src={
+              hoveredImage === product.id ? product.hoverImage : product.image
+            }
             alt={product.name}
             className="mx-auto h-[160px] object-contain"
             itemProp="image"
@@ -99,20 +104,24 @@ const ProductCard = ({ product }) => {
 };
 
 // Main Product Component
-const Product = ({ title, products }) => {
+const Product = ({ title, products = [] }) => {
   return (
     <section className="px-10 py-4" aria-label="Lightning Deals Section">
       {/* Dynamic Title */}
       <h2 className="text-3xl font-bold text-center mb-10">{title}</h2>
 
       <div className="relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
-            <div key={product.id} className="h-full">
-              <ProductCard product={product} />
-            </div>
-          ))}
-        </div>
+        {Array.isArray(products) && products.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {products.map((product) => (
+              <div key={product.id} className="h-full">
+                <ProductCard product={product} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-gray-500">No products found.</p>
+        )}
       </div>
     </section>
   );

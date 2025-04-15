@@ -17,7 +17,7 @@ const HeaderNav = () => {
           {/* Left section - Hamburger and Logo */}
           <div className="flex items-center flex-shrink-0 gap-2">
           <button
-  className="flex items-center text-black hover:text-[#3087d1] !bg-white border border-transparent hover:border-[#3087d1] transition-all duration-300 rounded-md p-1"
+  className="flex items-center text-black hover:text-[#228b22] !bg-white border border-transparent hover:border-[#228b22] transition-all duration-300 rounded-md p-1"
   onClick={() => setIsMenuOpen(true)}
 >
   <MdOutlineMenu size={30} />
@@ -36,26 +36,26 @@ const HeaderNav = () => {
           <div className="hidden md:flex flex-grow max-w-xl">
             <div className="relative w-full">
               <input
-                className="h-10 w-full bg-white rounded-md pl-10 pr-4 outline-none border border-gray-300 shadow-sm focus:border-[#3087d1]"
+                className="h-10 w-full bg-white rounded-md pl-10 pr-4 outline-none border border-gray-300 shadow-sm focus:border-[#228b22]"
                 placeholder="What do you want?"
               />
-              <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#3087d1]" size={20} />
+              <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#228b22]" size={20} />
             </div>
           </div>
 
           {/* Right - Desktop nav */}
-          <div className="hidden lg:flex items-center space-x-4 xl:space-x-5 flex-shrink-0">
-            <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/acrylic">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-5 flex-shrink-0 ">
+            <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#228b22] hover:border-2 rounded-md border-[#228b22] px-2 py-1" href="/acrylic">
               Joint Pain
             </a>
-            <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/shop">
+            <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#228b22] hover:border-2 rounded-md border-[#228b22] px-2 py-1" href="/shop">
               Hair Fall
             </a>
-            <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/photography">
+            <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#228b22] hover:border-2 rounded-md border-[#228b22] px-2 py-1" href="/photography">
               Sexual
             </a>
 
-            <a className="flex items-center text-base xl:text-lg hover:text-[#3087d1]" href={userName ? "/profile" : "/signin"}>
+            <a className="flex items-center text-base xl:text-lg hover:text-[#228b22]" href={userName ? "/profile" : "/signin"}>
               <div className="w-6 h-6 rounded-full border border-black flex items-center justify-center text-sm font-bold">
                 {userName ? userName.charAt(0).toUpperCase() : "S"}
               </div>
@@ -65,10 +65,10 @@ const HeaderNav = () => {
             </a>
 
             <a href="/wishlist">
-              <CiHeart size={24} className="cursor-pointer hover:text-[#3087d1]" />
+              <CiHeart size={24} className="cursor-pointer hover:text-[#228b22]" />
             </a>
             <a href="/cart">
-              <FiShoppingBag size={24} className="cursor-pointer hover:text-[#3087d1]" />
+              <FiShoppingBag size={24} className="cursor-pointer hover:text-[#228b22]" />
             </a>
 
             {/* Language Switcher */}
@@ -78,10 +78,10 @@ const HeaderNav = () => {
           {/* Mobile Icons */}
           <div className="flex lg:hidden items-center space-x-3 sm:space-x-2">
             <a href="/wishlist">
-              <CiHeart size={22} className="cursor-pointer hover:text-[#3087d1]" />
+              <CiHeart size={22} className="cursor-pointer hover:text-[#228b22]" />
             </a>
             <a href="/cart">
-              <FiShoppingBag size={22} className="cursor-pointer hover:text-[#3087d1]" />
+              <FiShoppingBag size={22} className="cursor-pointer hover:text-[#228b22]" />
             </a>
          
           </div>
@@ -91,11 +91,11 @@ const HeaderNav = () => {
         <div className="w-full px-4 sm:px-6 py-2 md:hidden">
           <div className="relative w-full">
             <input
-              className="h-10 w-full bg-white rounded-md pl-10 pr-4 border border-gray-300 shadow-sm focus:border-[#3087d1] placeholder-gray-600"
+              className="h-10 w-full bg-white rounded-md pl-10 pr-4 border border-gray-300 shadow-sm focus:border-[#228b22] placeholder-gray-600"
               placeholder="What do you want?"
             />
             <FaSearch
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#3087d1]"
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#228b22]"
               size={20}
             />
           </div>

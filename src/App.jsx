@@ -2,6 +2,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home'
+import productData from './Utils/ProductData';
 
 
 import SideMenu from './Components/SideMenu';
@@ -18,7 +19,8 @@ import TermsOfService from './FooterPages/TermsService';
 import TrackOrder from './FooterPages/TrackOrder';
 import Hospitality from './FooterPages/Hospitality';
 import HSBlog from './FooterPages/HSBlog';
-
+import Product from './Components/Product';
+import ProductDetailPage from './Components/ProductDetailPage';   
 
 
 
@@ -115,7 +117,27 @@ const App = () => {
            
         </PageLayout>
         } />
-  
+         
+         <Route path="/" element={<Home />} />
+         <Route path="/product" element={
+          <PageLayout>
+
+         
+          <Product/>
+          </PageLayout>} />
+         <Route
+  path="/product/:id"
+  element={
+  <PageLayout>
+    <ProductDetailPage products={productData} />
+    </PageLayout>
+    }
+/>
+
+
+
+
+
 
     
 

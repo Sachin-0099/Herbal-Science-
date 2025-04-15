@@ -52,13 +52,13 @@
         {/* Navigation buttons */}
         <button
           onClick={goToPrevSlide}
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full z-20 hover:bg-black"
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 !bg-black/50 text-white p-2 rounded-full z-20 hover:bg-black"
         >
           &#10094;
         </button>
         <button
   onClick={goToNextSlide}
-  className="absolute top-1/2 right-4 sm:right-6 md:right-8 lg:right-16 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full z-20 hover:bg-black"
+  className="absolute top-1/2 right-4 sm:right-6 md:right-8 lg:right-16 transform -translate-y-1/2 !bg-black/50 text-white p-2 rounded-full z-20 hover:bg-black"
 
 >
   &#10095;
@@ -69,3 +69,4 @@
   };
 
   export default HeroSection;
+ 

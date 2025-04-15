@@ -7,6 +7,7 @@ import Product from '../Components/Product'
 import BannerDivider from '../Components/BannerDivider'
 import VideoSection from '../Components/VideoSection'
 import Footer from '../Components/Footer'
+import productData from '../Utils/ProductData'
 const dealBanners = [
   { id: 1, image: "/Images/Banner99.jpeg" },
   { id: 2, image: "/Images/Banner199.webp" },
@@ -19,62 +20,7 @@ const festiveBanners = [
   { id: 2, image: "/Images/Festive2.jpg" },
   { id: 3, image: "/Images/Festive3.jpg" },
 ];
-const productData = [
-  {
-    id: 1,
-    name: "Ayurvedic Makeup Essentials Kit ...",
-    description: "Full Coverage| Nurtures & Repairs | Moisturises",
-    price: 307,
-    oldPrice: 1535,
-    rating: 4.2,
-    reviews: 48,
-    image: "/Images/Banner99.jpeg",
-    hoverImage: "/Images/Banner499.webp",
-    tag: "NO RETURNS",
-    badge: "360° beauty",
-  },
-  {
-    id: 2,
-    name: "Advanced Ayurvedic Pimple Treatm...",
-    description: "Fights Acne | Ideal For Stubborn Acne",
-    price: 115,
-    oldPrice: 575,
-    rating: 4.2,
-    reviews: 48,
-    image: "/Images/Banner499.webp",
-    hoverImage: "/Images/Banner299.webp",
-    tag: "NO RETURNS",
-    badge: "PRESERVE",
-  },
-  {
-    id: 1,
-    name: "Ayurvedic Makeup Essentials Kit ...",
-    description: "Full Coverage| Nurtures & Repairs | Moisturises",
-    price: 307,
-    oldPrice: 1535,
-    rating: 4.2,
-    reviews: 48,
-    image: "/Images/Banner99.jpeg",
-    hoverImage: "/Images/Banner499.webp",
-    tag: "NO RETURNS",
-    badge: "360° beauty",
-  },
-  {
-    id: 2,
-    name: "Advanced Ayurvedic Pimple Treatm...",
-    description: "Fights Acne | Ideal For Stubborn Acne",
-    price: 115,
-    oldPrice: 575,
-    rating: 4.2,
-    reviews: 48,
-    image: "/Images/Banner499.webp",
-    hoverImage: "/Images/Banner299.webp",
-    tag: "NO RETURNS",
-    badge: "PRESERVE",
-  },
-  
-  // more products...
-];
+
 
 
 const Home = () => {
