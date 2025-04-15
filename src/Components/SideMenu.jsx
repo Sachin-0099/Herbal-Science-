@@ -5,14 +5,35 @@ import { useNavigate } from "react-router-dom";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
 
+
+
 const SideMenu = ({ isOpen, onClose }) => {
+  const [openSections, setOpenSections] = useState({
+    sellers: false,
+    products: false,
+    external: false,
+    hairOils: false,
+    hairSupplements: false,
+    hairTreatment: false,
+    shampoosConditioners: false,
+    herbalPowders: false,
+    gainCapsules: false,
+    mealReplacers: false,
+    diabeticSupplements: false,
+    herbalTeas: false,
+    diabeticFoods: false,
+    diabeticJuices: false,
+    mensHealth: false,
+    womensHealth: false,
+  });
+
 
     const [firstName, setFirstName] = useState("");
       const [forceUpdate, setForceUpdate] = useState(0); // Used to force re-render
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const menuRef = useRef(null);
-  const [openSections, setOpenSections] = useState({});
+
 
   const toggleSection = useCallback((section) => {
     setOpenSections((prev) => ({
@@ -119,8 +140,8 @@ const SideMenu = ({ isOpen, onClose }) => {
 
         <ExpandableMenu
           title=" SuExternal Therapy"
-          isOpen={openSections.products}
-          toggle={() => toggleSection("products")}
+          isOpen={openSections.external}
+          toggle={() => toggleSection("external")}
         >
           <MenuItem text="Patches" link="/flash" />
           <MenuItem text="Heat Pads" link="/bundle" />
@@ -132,8 +153,8 @@ const SideMenu = ({ isOpen, onClose }) => {
       <MenuSection title="Hair Fall">
         <ExpandableMenu
           title="Hair Oils"
-          isOpen={openSections.acrylic}
-          toggle={() => toggleSection("acrylic")}
+          isOpen={openSections.hairOils}
+          toggle={() => toggleSection("hairOils")}
         >
           <MenuItem text="Herbal Oil" link="/sheets" />
 
@@ -143,8 +164,8 @@ const SideMenu = ({ isOpen, onClose }) => {
 
         <ExpandableMenu
           title=" Shampoos & Conditioners"
-          isOpen={openSections.UV}
-          toggle={() => toggleSection("UV")}
+          isOpen={openSections.hairSupplements}
+          toggle={() => toggleSection("hairSupplements")}
         >
           <MenuItem text="Anti-hair fall Shampoo" link="/frames" />
           <MenuItem text=" Sulfate-free Conditioner" link="/prints" />
@@ -153,8 +174,8 @@ const SideMenu = ({ isOpen, onClose }) => {
        
         <ExpandableMenu
           title="Supplements"
-          isOpen={openSections.UV}
-          toggle={() => toggleSection("UV")}
+          isOpen={openSections.hairTreatment}
+          toggle={() => toggleSection("hairTreatment")}
         >
           <MenuItem text="Biotin Capsules" link="/frames" />
           <MenuItem text="Hair Gummies" link="/prints" />
@@ -163,8 +184,8 @@ const SideMenu = ({ isOpen, onClose }) => {
         </ExpandableMenu>
         <ExpandableMenu
           title=" Hair Treatment Kits"
-          isOpen={openSections.UV}
-          toggle={() => toggleSection("UV")}
+          isOpen={openSections.shampoosConditioners}
+          toggle={() => toggleSection("shampoosConditioners")}
         >
           <MenuItem text="Hair Regrowth Kit" link="/frames" />
           <MenuItem text="Dandruff Control Kit" link="/prints" />
@@ -174,8 +195,8 @@ const SideMenu = ({ isOpen, onClose }) => {
       <MenuSection title="Weight Gain">
         <ExpandableMenu
           title="Herbal Powders"
-          isOpen={openSections.acrylic}
-          toggle={() => toggleSection("acrylic")}
+          isOpen={openSections.herbalPowders}
+          toggle={() => toggleSection("herbalPowders")}
         >
           <MenuItem text="Ashwagandha Churna" link="/sheets" />
 
@@ -185,8 +206,8 @@ const SideMenu = ({ isOpen, onClose }) => {
 
         <ExpandableMenu
           title="Capsules & Tonics"
-          isOpen={openSections.UV}
-          toggle={() => toggleSection("UV")}
+          isOpen={openSections.gainCapsules}
+          toggle={() => toggleSection("gainCapsules")}
         >
           <MenuItem text="Ayurvedic Capsules" link="/frames" />
           <MenuItem text=" Weight Gain Syrups" link="/prints" />
@@ -195,8 +216,8 @@ const SideMenu = ({ isOpen, onClose }) => {
        
         <ExpandableMenu
           title=" Meal Replacers"
-          isOpen={openSections.UV}
-          toggle={() => toggleSection("UV")}
+          isOpen={openSections.mealReplacers}
+          toggle={() => toggleSection("mealReplacers")}
         >
           <MenuItem text=" Herbal Protein Shakes" link="/frames" />
           <MenuItem text="Natural Mass Gainers" link="/prints" />
@@ -211,8 +232,8 @@ const SideMenu = ({ isOpen, onClose }) => {
 <MenuSection title="Diabetic">
         <ExpandableMenu
           title="Sugar Control Supplements"
-          isOpen={openSections.acrylic}
-          toggle={() => toggleSection("acrylic")}
+          isOpen={openSections.diabeticSupplements}
+          toggle={() => toggleSection("diabeticSupplements")}
         >
           <MenuItem text=" Karela Capsules" link="/sheets" />
 
@@ -223,8 +244,8 @@ const SideMenu = ({ isOpen, onClose }) => {
 
         <ExpandableMenu
           title="Herbal Teas"
-          isOpen={openSections.UV}
-          toggle={() => toggleSection("UV")}
+          isOpen={openSections.herbalTeas}
+          toggle={() => toggleSection("herbalTeas")}
         >
           <MenuItem text="Diabetic Control Tea" link="/frames" />
           <MenuItem text="Bitter Melon Tea" link="/prints" />
@@ -233,8 +254,8 @@ const SideMenu = ({ isOpen, onClose }) => {
        
         <ExpandableMenu
           title="Foods for Diabetics"
-          isOpen={openSections.UV}
-          toggle={() => toggleSection("UV")}
+          isOpen={openSections.diabeticFoods}
+          toggle={() => toggleSection("diabeticFoods")}
         >
           <MenuItem text="Low GI Foods" link="/frames" />
           <MenuItem text="Sugar-Free Snacks" link="/prints" />
@@ -243,8 +264,8 @@ const SideMenu = ({ isOpen, onClose }) => {
       
         <ExpandableMenu
           title=" Juices"
-          isOpen={openSections.UV}
-          toggle={() => toggleSection("UV")}
+          isOpen={openSections.diabeticJuices}
+          toggle={() => toggleSection("diabeticJuices")}
         >
           <MenuItem text=" Karela Jamun Juice" link="/frames" />
           <MenuItem text=" Neem Juice" link="/prints" />
@@ -257,8 +278,8 @@ const SideMenu = ({ isOpen, onClose }) => {
     <MenuSection title="Sexual Wellness">
         <ExpandableMenu
           title="Men's Health"
-          isOpen={openSections.acrylic}
-          toggle={() => toggleSection("acrylic")}
+          isOpen={openSections.mensHealth}
+          toggle={() => toggleSection("mensHealth")}
         >
           <MenuItem text="Stamina Capsules" link="/sheets" />
 
@@ -269,8 +290,8 @@ const SideMenu = ({ isOpen, onClose }) => {
 
         <ExpandableMenu
           title="Women's Health"
-          isOpen={openSections.UV}
-          toggle={() => toggleSection("UV")}
+          isOpen={openSections.womensHealth}
+          toggle={() => toggleSection("womensHealth")}
         >
           <MenuItem text=" Libido Enhancers" link="/frames" />
           <MenuItem text=" Mood Balance Supplements" link="/prints" />
