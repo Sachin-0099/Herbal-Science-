@@ -1,6 +1,6 @@
 import React from 'react'
 import SEOHelmet from '../Components/SEO/SeoHelmet'
-import slidesData from '../Utils/slidesData'
+
 import HeroSection from '../Components/HeroSection'
 import DiscountBannerSection from '../Components/DiscountBannerSection'
 import Product from '../Components/Product'
@@ -87,7 +87,7 @@ const Home = () => {
         description="Welcome to Herbal Science — Discover nature's wellness products handcrafted with care."
       />
        <div>
-       <HeroSection slides={slidesData} />
+     <HeroSection/>
        <DiscountBannerSection title="Shop Our Best Deals" images={dealBanners} />
       
      
