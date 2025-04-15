@@ -4,14 +4,7 @@ const slidesData = [
      
      
     },
-    {
-      image: "/Images/warehouse.avif",
-    
-    },
-    {
-      image: "/Images/Banner499.webp",
    
-    },
   ];
   
   export default slidesData;
