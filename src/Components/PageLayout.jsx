@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 import SideMenu from "./SideMenu";
 import HeaderNav from "./HeaderNav";
 import HeaderTop from "./HeaderTop";
-
+import { throttle } from "lodash";
 
 const PageLayout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [hideHeaderTop, setHideHeaderTop] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = throttle(() => {
       setHideHeaderTop(window.scrollY > 30);
-    };
+    }, 100); // 100ms delay to throttle the scroll event
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -23,17 +23,19 @@ const PageLayout = ({ children }) => {
       <div
         className={`flex-grow flex flex-col transition-all duration-300 ${
           isSidebarOpen ? "md:ml-0" : "ml-0"
-        } overflow-x-hidden`}
+        } ${isSidebarOpen ? "" : "ml-16"}`}
       >
         {/* Header Section */}
         <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg transition-all duration-300">
           {!hideHeaderTop && <HeaderTop />}
           <HeaderNav />
-         
         </div>
 
         {/* Page Content */}
-        <div className="w-full  pt-[140px] sm:pt-[130] mt-18 lg:mt-0 md:mt-2">
+        <div
+          className="w-full mt-18 lg:mt-0 md:mt-2"
+          style={{ paddingTop: hideHeaderTop ? "90px" : "140px" }} // Adjust padding dynamically
+        >
           {children}
         </div>
       </div>
